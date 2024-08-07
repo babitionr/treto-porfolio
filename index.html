@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https://html.bslthemes.com/treto/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Magnific Popup core CSS file -->
+    <link rel="stylesheet" href="src/magnific-popup.css" />
+
+    <link rel="stylesheet" href="./src/output.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Treto - Personal Portfolio Resume HTML Template</title>
+  </head>
+  <body class="bg-white overflow-hidden max-xl:overflow-y-auto">
+    <!-- handlebars 4 -->
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4/dist/handlebars.js"></script>
+    <div
+      class="m-2.5 max-xl:my-0 max-md:my-0 fixed z-20 pointer-events-none left-1.5 -right-1 top-2 -bottom-1.5 border-2 border-solid border-gray-300 after:absolute after:border-2 after:border-solid after:border-black after:-left-2 after:-top-2 after:bottom-1 after:right-2 after:box-border after:w-full">
+      <!---top-panel-->
+      <div
+        class="mil-top-panel max-xl:bg-white max-md:bg-white col-span-2 flex items-center h-20 justify-between transition delay-0 pointer-events-auto">
+        <div class="col-start-1 w-full justify-start items-center flex h-full">
+          <a
+            href="#"
+            class="border-b-2 z-20 border-r-2 border-solid border-black mt-0.5 px-10 w-44 h-20 flex items-center relative -left-2 -right-2 bottom-2 before:w-9 before:left-2 before:border-solid before:border-gray-300 after:absolute after:border-r-2 after:h-20 after:border-b-2 after:border-solid after:border-gray-300 after:left-2 after:top-1.5 after:-bottom-2 after:-right-2">
+            <img
+              src="https://html.bslthemes.com/treto/img/logo.png"
+              class="w-full" />
+          </a>
+          <nav
+            class="max-xl:hidden border-b-2 border-solid border-black mt-0.5 h-20 flex items-center relative -left-2 -right-2 bottom-2 before:w-10 before:left-2 before:border-solid before:border-gray-300 after:absolute after:h-20 after:border-b-2 after:border-solid after:border-gray-300 after:-left-1 after:top-1.5 after:-bottom-2 after:-right-1.5">
+            <ul
+              id="nav-desktop"
+              class="z-10 flex font-Jost-Font font-bold text-sm whitespace-nowrap uppercase leading-10"></ul>
+          </nav>
+          <div
+            class="hidden max-xl:block max-xl:absolute menu-toggle-btn p-4 border-2 border-solid border-black max-xl:top-0 max-xl:right-5 max-lg:text-white cursor-pointer z-50">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <nav
+          class="hidden max-xl:w-full max-xl:mt-20 max-xl:right-3 max-xl:absolute max-xl:visible max-xl:block max-xl:flex-col">
+          <ul
+            id="nav-respon"
+            class="fixed hide-nav font-Jost-Font font-semibold uppercase text-sm bg-white text-center text-black w-full p-6"></ul>
+        </nav>
+        <div
+          class="max-xl:hidden col-start-3 px-28 w-1/12 justify-end items-center flex h-full border-b-2 border-solid border-black mt-0.5 relative -left-2 -right-2 bottom-2 before:w-10 before:left-2 before:border-solid before:border-gray-300 after:absolute after:h-20 after:border-b-2 after:border-solid after:border-gray-300 after:left-2 after:top-1.5 after:-bottom-2 after:right-0">
+          <ul
+            id="nav-icon"
+            class="z-10 flex absolute left-10 justify-center bottom-7"></ul>
+        </div>
+      </div>
+
+      <!---footer-->
+      <div
+        class="mil-footer max-xl:hidden px-6 py-3 left-0 bottom-0 absolute border-t-2 border-solid border-gray-300 after:absolute after:border-t-2 after:border-solid after:border-black after:-left-2 after:-top-2 after:bottom-1 after:right-2 after:box-border after:w-full font-Jost-Font font-bold text-sm whitespace-nowrap uppercase leading-10">
+        <p class="mil-upper mil-upper-sm mb-2">
+          © 2024 <span class="mil-accent text-orange-600">Treto.</span> All
+          rights reserved.
+        </p>
+      </div>
+      <!---footer-end-->
+    </div>
+    <!---frame-end-->
+
+    <div id="main" class="mil-onepage">
+      <!-- 3 section đầu tiên -->
+
+      <!-- section 1 -->
+      <section
+        data-set="1"
+        class="mil-section fade fadeOut relative z-10 w-full h-screen md:max-xl:h-auto max-xl:pt-16 max-xl:mb-14">
+        <div class="h-full">
+          <div
+            class="w-full h-full relative justify-center items-center flex flex-col">
+            <div class="w-full h-full flex z-10 max-xl:flex max-xl:flex-col">
+              <div
+                class="w-7/12 pr-4 flex items-center max-xl:w-full max-xl:bg-white">
+                <div
+                  class="relative w-full pr-28 pl-56 mill-banner max-xl:px-8 max-xl:py-16 max-xl:text-center">
+                  <div
+                    class="w-full opacity-35 absolute box-bg h-36 t-0 -left-3/4 -z-10 before:w-full before:h-full before:absolute before:left-[150%]"></div>
+                  <div>
+                    <p class="mb-8 text-base font-bold uppercase">
+                      Graphic
+                      <span class="text-orange-600"> and </span>
+                      Web Developer
+                    </p>
+                    <h1
+                      class="text-shadow text-7xl mb-10 uppercase font-bold max-lg:text-4xl">
+                      Sophie Miller
+                    </h1>
+                    <div class="pl-14">
+                      <p class="mb-8">
+                        From France, Paris. I have rich experience in web
+                        design, also I am good at wordpress. I love to talk with
+                        you about our unique.
+                      </p>
+                      <div
+                        class="flex justify-start max-xl:justify-center max-lg:!flex-col max-lg:!justify-center">
+                        <a
+                          href=""
+                          class="flex font-semibold z-30 items-center justify-center text-sm h-14 border-solid border-2 border-black duration-500 ease-custom-cubic-bezier mr-4 pl-10 pr-10 uppercase rounded-sm shadow-custom-button hover:shadow-none max-lg:mb-4 max-lg:w-full"
+                          >Portfolio</a
+                        >
+                        <a
+                          href=""
+                          class="flex font-semibold z-30 items-center justify-center text-sm h-14 duration-500 ease-custom-cubic-bezier pl-10 pr-10 uppercase !bg-orange-600 text-white shadow-custom-button hover:shadow-none"
+                          >Contact me</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-5/12 pl-4 max-xl:w-full max-md:pl-0">
+                <img
+                  src="https://html.bslthemes.com/treto/img/faces/5.jpg"
+                  alt=""
+                  class="h-full w-full object-cover object-center align-top max-xl:h-3/5" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End section 1 -->
+
+      <!-- section 2 -->
+      <section
+        data-set="2"
+        class="mil-section fade fadeOut relative z-10 w-full h-screen flex justify-center items-center max-xl:h-auto max-xl:pb-24 max-md:pt-64">
+        <div
+          class="box-bg top-block w-96 h-96 absolute -z-10 -top-1/4 right-40 origin-bottom -rotate-12 opacity-35 rounded-full bg-black"></div>
+        <div class="container px-8 mx-auto w-full max-w-7xl">
+          <div
+            class="flex justify-between items-center max-xl:justify-center max-xl:items-center">
+            <div class="w-4/12 max-xl:hidden">
+              <div
+                class="w-full relative after:absolute after:border-2 after:border-solid after:border-black after:left-3 after:top-3 after:-bottom-3 after:-right-3">
+                <img
+                  src="https://html.bslthemes.com/treto/img/faces/1.jpg"
+                  alt="vaytaycuoi" />
+              </div>
+            </div>
+            <div class="w-7/12 max-xl:w-4/5">
+              <div class="flex flex-wrap font-Jost-Font">
+                <div class="w-full px-4">
+                  <p class="pb-7 uppercase text-xs font-semibold">
+                    <span class="text-orange-600">Hello</span>
+                    , my name is
+                  </p>
+                  <h2
+                    class="pb-14 uppercase text-6xl font-semibold text-shadow font-Jost-Font max-xl:text-3xl">
+                    Sophie Miller
+                  </h2>
+                  <p class="pb-7 text-lg font-medium font-Jost-Font">
+                    From France, Paris. I have rich experience in web design,
+                    also I am good at React, Vue.js. I love to talk with you
+                    about our unique. I have been studying UI UX Design since
+                    October 2020. I like creating a cool design project.
+                  </p>
+                  <p class="pb-7 text-lg font-medium font-Jost-Font">
+                    Over 6+ years of IT experience which includes 2+ years of a
+                    React JS Developer and 3 years of Experience as a UI/UX
+                    Developer and 1 years of Experience as software Developer.
+                  </p>
+                  <div class="relative flex justify-center">
+                    <a
+                      href=""
+                      class="absolute left-0 h-14 flex text-sm font-semibold items-center justify-center duration-500 ease-custom-cubic-bezier pr-10 pl-10 uppercase !border-transparent !bg-orange-600 border-black shadow-custom-button text-white hover:shadow-none max-lg:w-full"
+                      >Download CV</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End section 2 -->
+
+      <!-- section 3 -->
+      <section
+        data-set="3"
+        class="mil-section fade fadeOut relative z-10 w-full h-screen flex justify-center items-center max-xl:h-auto">
+        <div
+          class="box-bg top-block w-96 h-96 absolute -z-10 -top-32 right-80 origin-bottom -rotate-12 opacity-35 rounded-full bg-black"></div>
+        <div
+          class="box-bg w-80 h-96 absolute -z-10 origin-top-left rotate-6 bottom-32 left-36 opacity-35 rounded-full"></div>
+        <div
+          class="box-bg w-24 h-36 absolute top-32 left-16 -z-10 origin-top-left rotate-6 bottom-32 opacity-35 rounded-full bg-black"></div>
+        <div class="px-8 max-w-7xl w-full mx-auto">
+          <div class="uppercase font-semibold font-Jost-Font text-black">
+            <p class="mb-8">
+              my great <span class="text-orange-600">work</span>
+            </p>
+            <h2 class="text-6xl mb-16">ABILITY OR SKILL</h2>
+          </div>
+
+          <div class="flex flex-wrap -mx-3">
+            <div class="w-2/12 px-3 max-xl:hidden"></div>
+            <div class="w-10/12 px-3 max-xl:w-full">
+              <div class="flex flex-wrap max-xl:!flex-col">
+                <div class="w-1/2 mb-10 px-3 max-xl:w-full">
+                  <div class="box-icon flex justify-between">
+                    <div class="flex">
+                      <div
+                        class="flex relative w-16 h-16 text-3xl border-solid border-2 border-black pb-1 justify-center items-center before:absolute before:-left-2 before:-top-2 before:bg-gray-200 before:w-full before:h-full before:-z-10">
+                        <i class="fa-brands fa-figma"></i>
+                      </div>
+                    </div>
+                    <div class="w-96 max-xl:w-full max-xl:mx-5">
+                      <span class="font-semibold text-base uppercase"
+                        >figma</span
+                      >
+                      <div
+                        class="border-b-2 border-solid border-b-gray-300 py-1 ml-2">
+                        <div
+                          class="w-3/5 relative -left-2 h-3 border-b-2 border-r-2 border-orange-600">
+                          <span
+                            class="absolute top-0 right-0 translate-x-4 -translate-y-6"
+                            ><p
+                              class="text-orange-600 font-medium font-Jost-Font">
+                              60%
+                            </p></span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-1/2 mb-10 px-3 max-xl:w-full">
+                  <div class="box-icon flex justify-between">
+                    <div class="flex">
+                      <div
+                        class="flex relative w-16 h-16 text-3xl border-solid border-2 border-black pb-1 justify-center items-center before:absolute before:-left-2 before:-top-2 before:bg-gray-200 before:w-full before:h-full before:-z-10">
+                        <i class="fa-brands fa-php"></i>
+                      </div>
+                    </div>
+                    <div class="w-96 max-xl:w-full max-xl:mx-5">
+                      <span class="font-semibold text-base uppercase"
+                        >PHP / C++</span
+                      >
+                      <div
+                        class="border-b-2 border-solid border-b-gray-300 py-1 ml-2">
+                        <div
+                          class="w-4/5 relative -left-2 h-3 border-b-2 border-r-2 border-orange-600">
+                          <span
+                            class="absolute top-0 right-0 translate-x-4 -translate-y-6"
+                            ><p
+                              class="text-orange-600 font-medium font-Jost-Font">
+                              80%
+                            </p></span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-1/2 mb-10 px-3 max-xl:w-full">
+                  <div class="box-icon flex justify-between">
+                    <div class="flex">
+                      <div
+                        class="flex relative w-16 h-16 text-3xl border-solid border-2 border-black pb-1 justify-center items-center before:absolute before:-left-2 before:-top-2 before:bg-gray-200 before:w-full before:h-full before:-z-10">
+                        <i class="fa-brands fa-js"></i>
+                      </div>
+                    </div>
+                    <div class="w-96 max-xl:w-full max-xl:mx-5">
+                      <span class="font-semibold text-base uppercase"
+                        >JAVASCRIPT</span
+                      >
+                      <div
+                        class="border-b-2 border-solid border-b-gray-300 py-1 ml-2">
+                        <div
+                          class="w-3/4 relative -left-2 h-3 border-b-2 border-r-2 border-orange-600">
+                          <span
+                            class="absolute top-0 right-0 translate-x-4 -translate-y-6"
+                            ><p
+                              class="text-orange-600 font-medium font-Jost-Font">
+                              75%
+                            </p></span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-1/2 mb-10 px-3 max-xl:w-full">
+                  <div class="box-icon flex justify-between">
+                    <div class="flex">
+                      <div
+                        class="flex relative w-16 h-16 text-3xl border-solid border-2 border-black pb-1 justify-center items-center before:absolute before:-left-2 before:-top-2 before:bg-gray-200 before:w-full before:h-full before:-z-10">
+                        <i class="fa-brands fa-react"></i>
+                      </div>
+                    </div>
+                    <div class="w-96 max-xl:w-full max-xl:mx-5">
+                      <span class="font-semibold text-base uppercase"
+                        >REACT / NEXT.JS</span
+                      >
+                      <div
+                        class="border-b-2 border-solid border-b-gray-300 py-1 ml-2">
+                        <div
+                          class="w-3/4 relative -left-2 h-3 border-b-2 border-r-2 border-orange-600">
+                          <span
+                            class="absolute top-0 right-0 translate-x-4 -translate-y-6"
+                            ><p
+                              class="text-orange-600 font-medium font-Jost-Font">
+                              75%
+                            </p></span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-1/2 mb-10 px-3 max-xl:w-full">
+                  <div class="box-icon flex justify-between">
+                    <div class="flex">
+                      <div
+                        class="flex relative w-16 h-16 text-3xl border-solid border-2 border-black pb-1 justify-center items-center before:absolute before:-left-2 before:-top-2 before:bg-gray-200 before:w-full before:h-full before:-z-10">
+                        <i class="fa-brands fa-html5"></i>
+                      </div>
+                    </div>
+                    <div class="w-96 max-xl:w-full max-xl:mx-5">
+                      <span class="font-semibold text-base uppercase"
+                        >HTML5 / CSS3</span
+                      >
+                      <div
+                        class="border-b-2 border-solid border-b-gray-300 py-1 ml-2">
+                        <div
+                          class="w-11/12 relative -left-2 h-3 border-b-2 border-r-2 border-orange-600">
+                          <span
+                            class="absolute top-0 right-0 translate-x-4 -translate-y-6"
+                            ><p
+                              class="text-orange-600 font-medium font-Jost-Font">
+                              90%
+                            </p></span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-1/2 mb-10 px-3 max-xl:w-full">
+                  <div class="box-icon flex justify-between">
+                    <div class="flex">
+                      <div
+                        class="flex relative w-16 h-16 text-3xl border-solid border-2 border-black pb-1 justify-center items-center before:absolute before:-left-2 before:-top-2 before:bg-gray-200 before:w-full before:h-full before:-z-10">
+                        <i class="fa-brands fa-vuejs"></i>
+                      </div>
+                    </div>
+                    <div class="w-96 max-xl:w-full max-xl:mx-5">
+                      <span class="font-semibold text-base uppercase"
+                        >VUE.JS</span
+                      >
+                      <div
+                        class="border-b-2 border-solid border-b-gray-300 py-1 ml-2">
+                        <div
+                          class="w-7/12 relative -left-2 h-3 border-b-2 border-r-2 border-orange-600">
+                          <span
+                            class="absolute top-0 right-0 translate-x-4 -translate-y-6"
+                            ><p
+                              class="text-orange-600 font-medium font-Jost-Font">
+                              55%
+                            </p></span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End section 3 -->
+
+      <!-- End 3 section đầu tiên -->
+
+      <!-- 3 Section tiếp theo (Uyên) -->
+
+      <!-- Section 4 -->
+      <!-- Education -->
+      <section
+        data-set="4"
+        class="mil-section relative fade fadeOut py-20 px-20 max-xl:h-auto max-xl:p-0 max-2xl:px-8">
+        <div
+          class="w-72 h-96 opacity-35 -rotate-12 absolute box-bg top-2/4 left-1/4 -z-10 rounded-full before:w-24 before:h-36 before:absolute before:-left-28 before:rounded-full"></div>
+
+        <div class="container w-full mt-16 mx-auto px-8 max-2xl:px-8">
+          <div class="2xl:flex xl:flex mt-8 2xl:mx-6 xl:mx-6">
+            <div
+              class="2xl:col-start-1 2xl:justify-start xl:col-start-1 xl:justify-start flex-col mr-6">
+              <div class="2xl:text-right xl:text-right text-left">
+                <p
+                  class="text-black uppercase font-Jost-Font font-semibold text-base mb-7">
+                  Certificates
+                </p>
+                <h2
+                  class="text-black uppercase font-Jost-Font font-bold 2xl:text-6xl xl:text-6xl lg:text-5xl md:text-4xl sm:text-4xl text-3xl mb-14 text-shadow">
+                  Education
+                </h2>
+                <p
+                  class="text-black font-Jost-Font font-light text-lg leading-8">
+                  Extensive education in developing web pages using: HTML5,
+                  CSS3, SASS, JavaScript, React JS, Angular JS, JQuery, JSON,
+                  Node.js, Bootstrap.
+                </p>
+              </div>
+            </div>
+            <div
+              id="content-edu"
+              class="w-full 2xl:col-start-2 2xl:justify-end flex-col 2xl:ml-24 xl:ml-24 mt-10"></div>
+          </div>
+        </div>
+      </section>
+      <!-- Education end -->
+      <!-- End Section 4 -->
+
+      <!-- Section 5 -->
+      <!-- Expirience -->
+      <section
+        data-set="5"
+        class="mil-section relative fade fadeOut h-auto w-auto py-20 pl-28 pr-64 flex justify-center items-center max-2xl:pt-8 max-xl:p-0">
+        <div
+          class="w-72 h-96 opacity-35 -rotate-12 absolute box-bg bottom-3/4 right-1/4 -z-10 rounded-full before:w-24 before:h-36 before:absolute before:-left-28 before:rounded-full"></div>
+
+        <div
+          class="w-72 h-96 opacity-35 -rotate-12 absolute box-bg top-1/3 -left-0 -z-10 rounded-full"></div>
+
+        <div class="container w-full mx-auto px-8 mt-10 max-2xl:p-8">
+          <p
+            class="text-black uppercase font-Jost-Font font-semibold text-base mb-7 2xl:px-4 xl:px-4">
+            A Decade of <span class="text-orange-600"> work</span>
+          </p>
+
+          <h2
+            class="text-black uppercase font-Jost-Font font-bold 2xl:text-6xl xl:text-6xl lg:text-5xl md:text-4xl sm:text-4xl text-3xl mb-14 text-shadow">
+            Experience
+          </h2>
+
+          <div class="flex flex-wrap mt-8">
+            <div class="2xl:w-6/12 xl:w-6/12 lg:w-6/12 2xl:px-4 xl:px-4">
+              <div class="flex col-start-1 justify-start items-center">
+                <p
+                  class="text-black font-Jost-Font font-normal text-lg leading-8 mb-16">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="relative 2xl:w-6/12 max-xl:w-6/12 max-xl:pb-16 max-xl:mt-5 lg:w-6/12 2xl:px-4">
+              <div
+                class="flex col-start-2 max-xl:absolute max-xl:left-4 justify-end items-center">
+                <div
+                  class="w-auto mr-7 mb-1 text-black uppercase font-Jost-Font font-semibold text-base swiper-pag">
+                  <span>1</span> / <span>2</span>
+                </div>
+
+                <div class="flex swiper-button1 items-center mb-7 relative">
+                  <a
+                    class="swiper-button-prev flex justify-center mr-20 items-center w-16 h-16 border-2 border-solid border-black box-border shadow-custom-button hover:shadow-none duration-500 ease-custom-cubic-bezier">
+                    <i class="fa-solid fa-chevron-left"></i>
+                  </a>
+                  <a
+                    class="swiper-button-next flex justify-center items-center w-16 h-16 border-2 border-solid border-black box-border shadow-custom-button hover:shadow-none duration-500 ease-custom-cubic-bezier mr-4">
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="relative border-t-2 border-solic border-gray-300 w-full after:absolute after:border-t-2 after:border-solid after:border-black after:-left-2 after:-top-2 after:bottom-1 after:right-2 after:w-full"></div>
+
+            <div class="max-w-full 2xl:px-4 xl:px-4">
+              <div
+                class="swiper swiper-section-experience pt-14 overflow-hidden touch-pan-y">
+                <div
+                  id="content-exp"
+                  class="swiper-wrapper relative flex w-full h-full box-content transform duration-0"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Expirience end -->
+      <!-- End Section 5 -->
+
+      <!-- Section 6 -->
+      <!-- Services -->
+      <section
+        data-set="6"
+        class="mil-section relative fade fadeOut py-20 px-28 flex justify-center items-center max-2xl:p-0 max-xl:p-0">
+        <div
+          class="w-72 h-96 opacity-35 -rotate-12 absolute box-bg bottom-3/4 right-1/4 -z-10 rounded-full"></div>
+
+        <div
+          class="w-72 h-96 opacity-35 -rotate-12 absolute box-bg top-1/3 -left-0 -z-10 rounded-full"></div>
+
+        <div
+          class="container w-full mx-auto px-8 mt-10 max-xl:m-0 max-2xl:px-8">
+          <p
+            class="text-black uppercase font-Jost-Font font-semibold text-base mb-7 2xl:px-4 xl:px-4">
+            Freelance
+          </p>
+
+          <h2
+            class="text-black uppercase font-Jost-Font font-bold 2xl:text-6xl xl:text-6xl lg:text-5xl md:text-4xl sm:text-4xl text-3xl mb-14 text-shadow">
+            Services
+          </h2>
+
+          <div
+            class="flex flex-wrap justify-between items-center max-w-full 2xl:px-4 xl:px-4">
+            <div
+              id="content-ser"
+              class="flex 2xl:flex-row xl:flex-row flex-col relative w-full h-full box-content"></div>
+          </div>
+        </div>
+      </section>
+      <!-- Services end -->
+      <!-- End Section 6 -->
+      <!-- End 3 section tiếp theo (Uyên) -->
+
+      <!-- Section 7 -->
+      <!-- Testimonials -->
+      <section
+        data-set="7"
+        class="mil-section relative fade fadeOut py-20 px-28 flex justify-center items-center max-2xl:pt-8 max-xl:p-8">
+        <div
+          class="w-72 h-96 opacity-35 -rotate-12 absolute box-bg -bottom-1/4 right-20 -z-10 rounded-full before:w-24 before:h-36 before:absolute before:-left-28 before:rounded-full"></div>
+
+        <div class="container px-8 max-xl:p-0 max-2xl:p-8">
+          <div class="2xl:text-center xl:text-center text-left">
+            <p
+              class="text-black uppercase font-Jost-Font font-semibold text-base mb-7 2xl:px-4 xl:px-4">
+              Result of my
+              <span class="text-orange-600"> Work </span>
+            </p>
+
+            <h2
+              class="text-black uppercase font-Jost-Font font-bold 2xl:text-6xl xl:text-6xl lg:text-5xl md:text-4xl sm:text-4xl text-3xl mb-14 text-shadow">
+              Testimonials
+            </h2>
+
+            <p
+              class="text-black font-Jost-Font font-light text-lg leading-8 mb-14">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor
+              <br />
+              incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+
+          <div
+            class="relative border-t-2 border-solic border-gray-300 w-full after:absolute after:border-t-2 after:border-solid after:border-black after:-left-2 after:-top-2 after:bottom-1 after:right-2 after:w-full"></div>
+
+          <div
+            class="flex 2xl:flex-row xl:flex-row flex-col relative w-full h-full box-content">
+            <div class="2xl:w-8/12 xl:w-8/12">
+              <div
+                class="swiper swiper-section-testimonials overflow-hidden touch-pan-y pt-14">
+                <div
+                  id="content-tes"
+                  class="swiper-wrapper relative w-full h-full box-content flex transform duration-0"></div>
+              </div>
+            </div>
+
+            <div class="2xl:w-4/12 xl:w-4/12 2xl:px-4 xl:px-4">
+              <div
+                class="relative 2xl:border-l-2 xl:border-l-2 2xl:block xl:block border-solic border-gray-300 h-full after:absolute 2xl:after:border-l-2 xl:after:border-l-2 after:border-t-2 after:border-solid after:border-black after:-left-2 after:-top-2 after:bottom-1 after:right-2 after:h-full">
+                <div>
+                  <div
+                    class="relative pt-14 pb-14 max-2xl:pl-14 max-xl:pl-14 flex 2xl:flex-col xl:flex-col justify-between">
+                    <div
+                      class="flex max-xl:absolute max-xl:right-40 swiper-button2 items-center mb-7 relative">
+                      <a
+                        class="swiper-button-prev flex justify-center mr-20 items-center w-16 h-16 border-2 border-solid border-black box-border shadow-custom-button hover:shadow-none duration-500 ease-custom-cubic-bezier">
+                        <i class="fa-solid fa-chevron-left"></i>
+                      </a>
+                      <a
+                        class="swiper-button-next flex justify-center items-center w-16 h-16 border-2 border-solid border-black box-border shadow-custom-button hover:shadow-none duration-500 ease-custom-cubic-bezier mr-4">
+                        <i class="fa-solid fa-chevron-right"></i>
+                      </a>
+                    </div>
+
+                    <div
+                      class="w-auto mr-7 pl-5 pt-5 max-2xl:mb-36 max-xl:mb-36 max-xl:absolute max-xl:top-1/2 max-xl:left-0 text-black uppercase font-Jost-Font font-semibold text-base swiper-pagination">
+                      <span>1</span> / <span>4</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Testimonials end -->
+      <!-- End Section 7 -->
+
+      <!-- Section 8-->
+      <section
+        data-set="8"
+        class="mil-section fade fadeOut relative h-screen w-full flex justify-center items-center pt-8 max-lg:h-auto max-xl:text-3xl">
+        <div
+          class="box-bg top-block w-80 h-96 absolute -z-10 -bottom-8 -right-12 origin-bottom -rotate-12 opacity-35 rounded-full bg-black"></div>
+        <div
+          class="box-bg w-24 h-36 absolute bottom-32 right-80 -z-10 origin-bottom -rotate-12 opacity-35 rounded-full bg-black"></div>
+
+        <div class="container max-w-7xl w-full px-12 mx-auto font-Jost-Font">
+          <p class="mb-7 text-base font-semibold text-black uppercase">
+            CONTACT <span class="text-orange-600">ME</span>
+          </p>
+          <h2
+            class="text-shadow mb-16 uppercase text-6xl font-semibold max-lg:text-3xl">
+            Let's get you an estimate
+          </h2>
+          <div
+            class="flex flex-wrap justify-between text-base text-black max-lg:flex-col">
+            <div id="container-contact" class="w-1/3 max-lg:w-full"></div>
+            <div class="w-7/12 max-lg:w-full">
+              <form action="">
+                <div
+                  class="flex flex-wrap text-base text-black font-semibold max-lg:flex-col">
+                  <div class="w-1/2 uppercase px-4 max-lg:w-full max-lg:px-0">
+                    <label for="" class="block mb-4"
+                      >Your full name
+                      <span class="text-orange-600">*</span></label
+                    >
+                    <input
+                      type="text"
+                      class="w-full mb-7 px-7 bg-zinc-100 h-16 outline-none" />
+                  </div>
+                  <div class="w-1/2 uppercase px-4 max-lg:w-full max-lg:px-0">
+                    <label for="" class="block mb-4"
+                      >Your email address
+                      <span class="text-orange-600">*</span></label
+                    >
+                    <input
+                      type="text"
+                      class="w-full mb-7 px-7 bg-zinc-100 h-16 outline-none" />
+                  </div>
+                  <div class="w-full uppercase px-4 max-lg:px-0">
+                    <label for="" class="block mb-4"
+                      >Your email address
+                      <span class="text-orange-600">*</span></label
+                    >
+                    <input
+                      type="text"
+                      class="w-full mb-7 px-7 py-4 bg-zinc-100 h-32 outline-none" />
+                  </div>
+                  <div
+                    class="w-full flex justify-between items-center font-normal text-lg px-4 max-lg:px-0 max-lg:h-auto">
+                    <label
+                      for=""
+                      class="block cursor-pointer relative pl-10 mb-7">
+                      by sending, I accept the
+                      <a class="text-orange-600 underline decoration-solid"
+                        >terms and conditions</a
+                      ><input
+                        type="checkbox"
+                        class="cursor-pointer absolute h-0 w-0 opacity-0" />
+                      <span
+                        class="check-box absolute top-0 left-0 h-6 w-6 bg-zinc-200"
+                        onclick="toggleBackground()"></span>
+                    </label>
+                    <button
+                      class="uppercase flex justify-center items-center text-sm h-14 px-10 border-solid border-2 border-orange-600 bg-orange-600 text-white font-semibold shadow-custom-button hover:shadow-none">
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Section 8-->
+    </div>
+
+    <!--pagination-->
+    <div
+      class="mil-pagination max-xl:hidden z-50 flex-col flex fixed top-1/2 right-12 -translate-y-28 items-center before:absolute before:left-1/2 before:min-w-0.5 before:h-full before:bg-gray-300">
+      <div
+        class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4">
+        <a
+          data-scroll-to="1"
+          class="scrollToSection group active1 absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex">
+          <p
+            class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-8 right-5 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45">
+            Home
+          </p>
+        </a>
+      </div>
+      <div
+        class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4">
+        <a
+          data-scroll-to="2"
+          class="scrollToSection group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex">
+          <p
+            class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-8 right-5 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45">
+            About
+          </p>
+        </a>
+      </div>
+      <div
+        class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4">
+        <a
+          data-scroll-to="3"
+          class="scrollToSection group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex">
+          <p
+            class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-8 right-5 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45">
+            Skills
+          </p>
+        </a>
+      </div>
+      <div
+        class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4">
+        <a
+          data-scroll-to="4"
+          class="scrollToSection group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex">
+          <p
+            class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-10 right-3 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45">
+            Education
+          </p>
+        </a>
+      </div>
+      <div
+        class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4">
+        <a
+          data-scroll-to="5"
+          class="scrollToSection group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex">
+          <p
+            class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-12 right-4 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45">
+            Experience
+          </p>
+        </a>
+      </div>
+      <div
+        class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4">
+        <a
+          data-scroll-to="6"
+          class="scrollToSection group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex">
+          <p
+            class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-10 right-4 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45">
+            Services
+          </p>
+        </a>
+      </div>
+      <div
+        class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4">
+        <a
+          data-scroll-to="7"
+          class="scrollToSection group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex">
+          <p
+            class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-12 right-1 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45">
+            Testimonials
+          </p>
+        </a>
+      </div>
+      <div class="mil-dot flex items-center relative w-4 h-4 cursor-pointer">
+        <a
+          data-scroll-to="8"
+          class="scrollToSection group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex">
+          <p
+            class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-10 right-3 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45">
+            Contacts
+          </p>
+        </a>
+      </div>
+    </div>
+    <!--pagination- end-->
+
+    <script type="module" src="/src/main.ts"></script>
+    <!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Magnific Popup core JS file -->
+    <script src="src/magnific-popup.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".image-link").magnificPopup({ type: "image" });
+      });
+    </script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".swiper-section-experience", {
+        rewind: true,
+        hashNavigation: true,
+        spaceBetween: 30,
+        speed: 800,
+        parallax: !0,
+        pagination: {
+          el: ".swiper-pag",
+          type: "fraction",
+          clickable: !0,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        slidesPerView: 1,
+        breakpoints: {
+          1366: {
+            slidesPerView: 3,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+          768: {
+            slidesPerView: 1,
+          },
+          500: {
+            slidesPerView: 1,
+          },
+        },
+      });
+
+      new Swiper(".swiper-section-testimonials", {
+        rewind: true,
+        hashNavigation: true,
+        spaceBetween: 30,
+        speed: 800,
+        parallax: !0,
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+          clickable: !0,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        slidesPerView: 1,
+      });
+    </script>
+
+    <!--Scroll and pagination effect-->
+    <script>
+      $(document).ready(function () {
+        if ($(window).width() >= 1280) {
+          var delay = false;
+          var currentPage = 1;
+          var pageCount = $(".scrollToSection").length;
+
+          $(document).ready(function () {
+            $("a[data-scroll-to]").on("click", function (event) {
+              event.preventDefault();
+              var targetDataSet = $(this).attr("data-scroll-to");
+              var targetSection = $(
+                'section[data-set="' + targetDataSet + '"]'
+              );
+              if (targetSection.length > 0) {
+                $("html, body").animate(
+                  {
+                    scrollTop: targetSection.offset().top,
+                  },
+                  0
+                );
+                currentPage = targetDataSet;
+                $("[data-scroll-to='" + currentPage + "']").addClass("active1");
+                $("[data-scroll-to]").each(function () {
+                  if ($(this).attr("data-scroll-to") != currentPage) {
+                    $(this).removeClass("active1");
+                  }
+                });
+              }
+            });
+          });
+          $(document).on("mousewheel DOMMouseScroll", function (event) {
+            if (delay) return;
+            delay = true;
+            setTimeout(function () {
+              delay = false;
+            }, 600);
+
+            var wd =
+              event.originalEvent.wheelDelta || -event.originalEvent.detail;
+            if (wd < 0) {
+              if (currentPage < pageCount) {
+                currentPage++;
+                console.log(currentPage);
+              }
+            } else {
+              if (1 < currentPage) {
+                currentPage--;
+                console.log(currentPage);
+              }
+            }
+            $("html,body").animate(
+              {
+                scrollTop: $("[data-set='" + currentPage + "']").offset().top,
+              },
+              700
+            );
+            $("[data-scroll-to='" + currentPage + "']").addClass("active1");
+            $("[data-scroll-to]").each(function () {
+              if ($(this).attr("data-scroll-to") != currentPage) {
+                $(this).removeClass("active1");
+              }
+            });
+          });
+        }
+      });
+    </script>
+    <!--Scroll and pagination effect end-->
+
+    <!--Fade Effect-->
+    <script>
+      if ($(window).width() >= 1280) {
+        const observerOptions = {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0.7,
+        };
+        function observerCallback(entries, observer) {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.replace("fadeOut", "fadeIn");
+            } else {
+              entry.target.classList.replace("fadeIn", "fadeOut");
+            }
+          });
+        }
+        const observer = new IntersectionObserver(
+          observerCallback,
+          observerOptions
+        );
+        const fadeElms = document.querySelectorAll(".fade");
+        fadeElms.forEach((el) => observer.observe(el));
+      }
+    </script>
+    <!--Fade Effect End-->
+
+    <!--navbutton effect-->
+    <script>
+      $(".menu-toggle-btn").click(function () {
+        $(this).toggleClass("open");
+      });
+      $(".menu-toggle-btn").click(function () {
+        if ($(".hide-nav").hasClass("display-nav")) {
+          $(".hide-nav").removeClass("display-nav"); // Ẩn nếu đã hiển thị
+        } else {
+          $(".hide-nav").addClass("display-nav"); // Hiển thị nếu đã ẩn
+        }
+      });
+      $(document).ready(function () {
+        $(".navmb").hover(
+          function () {
+            $(".dropdown-m").addClass("nav-respons");
+          },
+          function () {
+            $(".dropdown-m").removeClass("nav-respons");
+          }
+        );
+      });
+    </script>
+    <!--navbutton effect end-->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </body>
+</html>

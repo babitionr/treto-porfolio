@@ -1,0 +1,222 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-shadow {
+  text-shadow: 5px 5px 0 rgba(16, 16, 16, 0.18);
+}
+
+.fadeOut {
+  opacity: 0;
+  transition: 0s;
+}
+.fadeIn {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.active1 {
+  border: 4px solid #ea580c;
+}
+
+.box-bg {
+  --dot-size: 2px;
+  --dot-space: 10px;
+
+  background: linear-gradient(
+        90deg,
+        #fff calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center/var(--dot-space) var(--dot-space),
+    linear-gradient(
+        #fff calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center/var(--dot-space) var(--dot-space),
+    #101010;
+}
+
+.box-bg::before {
+  --dot-size: 2px;
+  --dot-space: 10px;
+
+  background: linear-gradient(
+        90deg,
+        #fff calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center/var(--dot-space) var(--dot-space),
+    linear-gradient(
+        #fff calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center/var(--dot-space) var(--dot-space),
+    #101010;
+}
+
+.box-email::after,
+.box-phone::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 70px;
+  height: 70px;
+  opacity: 0.3;
+  pointer-events: none;
+
+  --dot-size: 2px;
+  --dot-space: 10px;
+
+  background: linear-gradient(
+        90deg,
+        #fff calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center/var(--dot-space) var(--dot-space),
+    linear-gradient(
+        #fff calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center/var(--dot-space) var(--dot-space),
+    #101010;
+}
+
+.checked {
+  background-color: #fa4729;
+}
+
+.checked::after {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 6px;
+  width: 5px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg) scale(1.2);
+}
+
+@media (max-width: 1280px) {
+  .box-bg,
+  .box-bg::before {
+    display: none;
+  }
+
+  .fadeOut {
+    opacity: 1;
+  }
+  .fadeIn {
+    opacity: 1;
+  }
+}
+
+.menu-toggle-btn {
+  margin: 10px;
+  cursor: pointer;
+  width: 55px;
+  height: 55px;
+
+  span {
+    background: #1d1d1b;
+    display: block;
+    width: 23px;
+    height: 2px;
+    border-radius: 10px;
+    margin-bottom: 6px;
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.3s linear;
+  }
+  &.open {
+    span {
+      &:nth-child(1),
+      &:nth-child(3) {
+        transform: translate(-1px, 10px) rotate(-45deg) scalex(1.1);
+        margin: 0;
+      }
+      &:nth-child(2) {
+        height: 0;
+        margin: 0;
+      }
+      &:nth-child(3) {
+        transform: translate(-1px, 9px) rotate(45deg) scalex(1.1);
+      }
+    }
+  }
+}
+
+.dropdown-m {
+  transition-duration: 0.2s;
+}
+.nav-respons {
+  pointer-events: none;
+  display: block;
+}
+
+.hide-nav {
+  display: none;
+  transition: all 0.4s;
+}
+.display-nav {
+  display: block;
+  transition: all 0.4s;
+}
+.swiper-button1 {
+  position: relative;
+  .swiper-button-prev {
+    position: absolute;
+    left: 10%;
+    .fa-chevron-left:before {
+      content: "\f053";
+      color: black;
+    }
+  }
+  .swiper-button-disabled {
+    background: red;
+  }
+  .swiper-button-prev:after {
+    content: "";
+  }
+
+  .swiper-button-next {
+    position: absolute;
+    left: 80px;
+    .fa-chevron-right:before {
+      content: "\f054";
+      color: black;
+    }
+  }
+  .swiper-button-next:after {
+    content: none;
+  }
+}
+.swiper-button2 {
+  .swiper-button-prev {
+    right: 0;
+    .fa-chevron-left:before {
+      content: "\f053";
+      color: black;
+    }
+  }
+  .swiper-button-prev:after {
+    content: "";
+  }
+
+  .swiper-button-next {
+    left: 90px;
+    .fa-chevron-right:before {
+      content: "\f054";
+      color: black;
+    }
+  }
+  .swiper-button-next:after {
+    content: none;
+  }
+}
+
+.omg {
+  background: yellow;
+}
